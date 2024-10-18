@@ -1,12 +1,18 @@
+import LoginBar from "./LoginBar";
+import LoginModal from "./LoginModal";
+import Login from "./Login";
+
 
 function Auth() {
+
   return (
     <>
-      <section className="w-full mx-auto">
-        <div className="w-full flex justify-center">
-          <div className="bg-[#ffe599] ">
-            
-          </div>
+      <section className="w-full mx-auto px-[10px]">
+        <div className="w-full grid justify-center py-[16px]">
+          <LoginBar />
+          <LoginModal>
+            <Login/>
+          </LoginModal>
         </div>
       </section>
     </>

@@ -24,7 +24,7 @@ function NavBar() {
           to={"/auth"}
           className="hover:bg-orange-500 flex items-center lg:text-xl font-bold absolute lg:right-[80px] right-[20px] top-[30px] rounded-lg lg:top-[45px] bg-orange-600 lg:px-[20px] px-[10px] py-[5px] lg:py-[10px]"
         >
-          Get Started
+          Login
           <span className="mx-[5px]  font-bold text-2xl">
             <CiLogin />
           </span>
