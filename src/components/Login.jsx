@@ -23,7 +23,7 @@ function Login() {
         <button className="bg-orange-600 px-[50px] font-bold hover:cursor-pointer hover:bg-orange-500 md:px-[80px] py-[5px] md:py-[10px] rounded-[10px] mt-[5px]">
           Login
         </button>
-        <p className="w-full  md:my-[10px] my-[6px]  bg-gradient-to-r from-slate-200 via-orange-600 to-slate-200 rounded-md py-[2px]"></p>
+        <p className="w-full  md:my-[10px] my-[6px]  bg-gradient-to-r from-orange-200 via-orange-600 to-orange-200 rounded-md py-[2px]"></p>
         <a
           href="#"
           className="md:text-[14px] text-[12px]  text-blue-900 hover:cursor-pointer hover:underline hover:text-violet-900"

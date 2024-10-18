@@ -6,7 +6,7 @@ function LoginBar() {
     <>
       <div className="md:my-[10px] my-[5px] bg-[#ffe599]  px-[10px]  py-[10px]  rounded-md">
         <NavLink
-          to={"/auth"}
+          to={"/authlogin"}
           className={({ isActive }) =>
             ` ${
               isActive ? "bg-orange-600 rounded-r-full" : ""
@@ -16,7 +16,7 @@ function LoginBar() {
           Login
         </NavLink>
         <NavLink
-          to={"/signup"}
+          to={"/authsignup"}
           className={({ isActive }) =>
             `ml-[5px] ${
               isActive ? "bg-orange-600 rounded-l-full" : ""
