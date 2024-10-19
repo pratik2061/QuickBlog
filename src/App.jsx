@@ -8,6 +8,8 @@ import Layouts from "./Layouts";
 import Auth from "./components/Auth";
 import SignupModal from "./components/SignupModal";
 import Home from './components/home/Home'
+import Blog from './components/pages/blog/Blog'
+import Contact from './components/pages/contact/Contact'
 
 function App() {
   const router = createBrowserRouter(
@@ -16,6 +18,8 @@ function App() {
         <Route path="/" element={<Home/>}/>
         <Route path="/authlogin" element={<Auth />} />
         <Route path="/authsignup" element={<SignupModal />} />
+        <Route path="/blog" element={<Blog/>} />
+        <Route path="/contact" element={<Contact/>}/>
       </Route>
     )
   );

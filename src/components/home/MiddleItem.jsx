@@ -8,8 +8,8 @@ function MiddleItem() {
   const [thirdElement, setThirdElement] = useState(false);
   return (
     <>
-      <div className="md:mx-[40px] mx-[10px] md:my-[40px] my-[25px] md:p-[20px] p-[10px] grid md:grid-cols-2 gap-2 grid-cols-1 ">
-        <div className="space-y-1 ">
+      <div className="md:mx-[60px] mx-[10px] md:my-[10px] my-[25px] md:p-[20px] p-[10px] grid md:grid-cols-2 md:gap-6 gap-2 grid-cols-1 ">
+        <div className="space-y-1  ">
           <div
             onClick={() => (
               setFirstElement(!firstElement),
@@ -72,22 +72,22 @@ function MiddleItem() {
               <span className="mx-[5px]">
                 {thirdElement ? <IoIosArrowDown /> : <IoIosArrowForward />}
               </span>
-              Blog beautifully
+              Share anything ,simply
             </div>
             <p
               className={` ${
                 thirdElement ? "scale-y-100 h-full " : "scale-y-0 h-0 "
               } w-[90%] break-words pl-[10px] pt-[6px]`}
             >
-              Customize your blog’s look and feel in a couple of clicks with
-              beautifully designed themes. Bring your writing to life with
-              magical drag-and-drop layouts. Or put your fingerprint on every
-              font, color, and element on the page.
+              From video to audio, stories to GIFs, bring it all together—right
+              from where you write. And with plenty of storage for every type of
+              media, your content’s secure, easy to reuse anywhere on your blog,
+              and owned by you alone.
             </p>
           </div>
         </div>
         <div className="flex justify-center">
-          <img src={blogHome} className="w-[450px] w-[450px]" alt="" />
+          <img src={blogHome} className="w-[450px]" alt="" />
         </div>
       </div>
     </>

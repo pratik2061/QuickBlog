@@ -28,7 +28,7 @@ function Login() {
           href="#"
           className="md:text-[14px] text-[12px]  text-blue-900 hover:cursor-pointer hover:underline hover:text-violet-900"
         >
-          Forget Password ?
+          Lost your password ?
         </a>
       </form>
     </>

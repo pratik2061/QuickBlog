@@ -1,46 +1,25 @@
 import { Link } from 'react-router-dom'
 import logo from '../assets/quickBlogLogo.png'
-import { CiLogin, CiLogout } from 'react-icons/ci';
-import { useState } from 'react';
-
 
 
 function NavBar() {
-  const [status ,setStatus] = useState(true)
   return (
     <>
-      <div className="lg:py-[12px] py-[10px] px-[12px] lg:px-[16px] flex w-full relative mx-auto">
-        <Link onClick={() => setStatus(true)} to={"/"}>
+      <div className="lg:py-[12px] py-[20px] px-[12px] lg:px-[16px] flex w-full relative mx-auto">
+        <Link to={"/"}>
           <img
-            className="lg:w-[120px] w-[80px] h-[80px] lg:h-[120px] rounded-full"
+            className="lg:w-[120px] w-[60px] h-[60px] lg:h-[120px] rounded-full"
             src={logo}
             alt="quickBlogLogo"
           />
         </Link>
-        <ul></ul>
-        {status ? (
-          <Link
-            onClick={() => setStatus((prev) => !prev)}
-            to={"/authlogin"}
-            className="hover:bg-orange-500 flex items-center lg:text-xl font-bold absolute lg:right-[80px] right-[20px] top-[30px] rounded-lg lg:top-[45px] bg-orange-600 lg:px-[20px] px-[10px] py-[5px] lg:py-[10px]"
-          >
-            Login
-            <span className="mx-[5px]  font-bold text-2xl">
-              <CiLogin />
-            </span>
-          </Link>
-        ) : (
-          <Link
-            onClick={() => setStatus((prev) => !prev)}
-            to={"/"}
-            className="hover:bg-orange-500 flex items-center lg:text-xl font-bold absolute lg:right-[80px] right-[20px] top-[30px] rounded-lg lg:top-[45px] bg-orange-600 lg:px-[20px] px-[10px] py-[5px] lg:py-[10px]"
-          >
-            <span className="mx-[5px]  font-bold text-2xl">
-              <CiLogout />
-            </span>
-            Back
-          </Link>
-        )}
+        <div className='flex absolute md:left-[190px] md:top-[37px] lg:left-[310px] lg:top-[62px] left-[120px] top-[40px]'>
+          <ul className='flex space-x-12 font-bold lg:space-x-56 md:space-x-36 md:text-xl lg:text-2xl text-sm '>
+            <Link to={'/'} className='border-b-2 border-orange-600 hover:cursor-pointer hover:border-orange-400  hover:animate-pulse'>Home</Link>
+            <Link to={'/blog'} className='border-b-2 border-orange-600 hover:cursor-pointer hover:border-orange-400  hover:animate-pulse'>Blog</Link>
+            <Link to={'/contact'} className='border-b-2 border-orange-600 hover:cursor-pointer hover:border-orange-400  hover:animate-pulse'>Contact</Link>
+          </ul>
+        </div>
       </div>
     </>
   );
