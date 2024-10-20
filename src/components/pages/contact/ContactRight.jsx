@@ -29,7 +29,12 @@ function ContactRight() {
               className=" w-full outline-none md:text-lg text-md px-[10px] py-[2px] md:py-[5px] border-[1px] border-orange-600 rounded-md"
             ></textarea>
           </div>
-          <button className="mt-[10px] md:px-[50px] px-[20px] py-[8px] md:py-[12px] bg-orange-600 font-semibold text-lg rounded-md">
+          <button
+          onClick={(e)=>(
+            e.preventDefault(),
+            alert("Will be in touch soon")
+          )}
+          className="mt-[10px] md:px-[50px] px-[20px] py-[8px] md:py-[12px] bg-orange-600 font-semibold text-lg rounded-md">
             Submit
           </button>
         </div>
