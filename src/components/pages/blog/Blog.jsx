@@ -1,11 +1,12 @@
 import { FaEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom"
+import { removeBlog } from "../../../redux/slice/blogSlice";
 
 function Blog() {
   const blogs = useSelector((state)=>state.blogs)  
-  
+  const dispatch = useDispatch()
   return (
     <>
       <section className="mx-auto">
@@ -24,23 +25,27 @@ function Blog() {
           {blogs.map((item) => (
             <div
               key={item.id}
-              className="bg-[#ffe599] md:px-[20px] px-[10px] md:py-[15px] py-[10px] mx-[10px] my-[10px] lg:w-[45%] w-[100%] rounded-lg "
+              className="bg-[#ffe599] shadow-2xl md:px-[20px] px-[10px] md:py-[15px] py-[10px] mx-[10px] my-[10px] lg:w-[45%] w-[100%] rounded-lg "
             >
               <div className="grid grid-cols-2 md:mb-[20px] mb-[10px]">
                 <p className="font-bold md:text-xl md:px-[20px] px-[10px] text-lg">
                   {item.title}
                 </p>
                 <span className="flex justify-end md:pl-[20px] md:space-x-8 space-x-4 text-[20px]">
-                  <Link className="">
+                  <Link
+                  to={`/blog/edit/${item.id}`}
+                  className="">
                     <FaEdit className="text-yellow-700 hover:text-yellow-600  "/>
                   </Link>
                   <Link className="">
-                    <MdDelete  className="text-red-700 hover:text-red-600"/>
+                    <MdDelete 
+                    onClick={()=>dispatch(removeBlog(item.id))}
+                    className="text-red-700 hover:text-red-600"/>
                   </Link>
                 </span>
               </div>
               <div className="md:px-[20px] px-[10px]">
-                <p className="">{item.description}</p>
+                <p className="text-lg w-[80%] py-[10px]">{item.description}</p>
               </div>
             </div>
           ))}
