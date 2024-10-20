@@ -30,7 +30,7 @@ function Blog() {
                 <p className="font-bold md:text-xl md:px-[20px] px-[10px] text-lg">
                   {item.title}
                 </p>
-                <span className="flex justify-end md:pl-[20px] md:space-x-4 space-x-2 md:text-xl">
+                <span className="flex justify-end md:pl-[20px] md:space-x-8 space-x-4 text-[20px]">
                   <Link className="">
                     <FaEdit className="text-yellow-700 hover:text-yellow-600  "/>
                   </Link>
