@@ -7,23 +7,14 @@ const initialState = {
       title: "demo blog",
       description: "i am admin of this quick blog web app.",
     },
+    
     {
       id: 2,
       title: "Last step",
       description: "Ending of the quick blog project.",
     },
-    {
-      id: 3,
-      title: "Ready to jump",
-      description:
-        "Ready for the big project and to improve my skills in react.With worthy project like appointment booking web app",
-    },
-    {
-      id: 4,
-      title: "Ready to jump",
-      description:
-        "Ready for the big project and to improve my skills in react.With worthy project like appointment booking web app",
-    },
+
+
   ],
 };
 
@@ -32,15 +23,22 @@ export const blogSlice = createSlice({
   initialState,
   reducers:{
     addBlog : (state,action)=>{
+      const data = action.payload
       const blog ={
         id : (state.blogs.length +1),
-        title : action.payload,
-        description : action.payload,
+        title : data.title,
+        description : data.description,
       }
+      
       state.blogs.push(blog)
     },
     editBlog : (state,action)=>{
-
+      const data = action.payload
+      const findItem = state.blogs.find((items)=>items.id === data.id)
+      if (findItem) {
+        findItem.title = data.title,
+        findItem.description = data.description
+      }
     },
     removeBlog:(state,action)=>{
       const id = action.payload;

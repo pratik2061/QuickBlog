@@ -28,7 +28,13 @@ function Signup() {
             className="w-[100%] rounded-md outline-none border-[1px] border-orange-600 md:px-[15px] px-[10px] md:py-[5px] py-[3px] text-lg font-semibold "
           />
         </div>
-        <button className="bg-orange-600 font-bold hover:cursor-pointer hover:bg-orange-500 px-[50px] md:px-[80px] py-[5px] md:py-[10px] rounded-[10px] mt-[5px]">
+        <button
+          onClick={(e)=>{
+            e.preventDefault();
+            alert("sorry for the inconvinence,but database is not connected");
+          }}
+          className="bg-orange-600 font-bold hover:cursor-pointer hover:bg-orange-500 px-[50px] md:px-[80px] py-[5px] md:py-[10px] rounded-[10px] mt-[5px]"
+        >
           Sign Up
         </button>
       </form>
