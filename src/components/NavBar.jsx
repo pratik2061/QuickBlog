@@ -13,7 +13,7 @@ function NavBar() {
             alt="quickBlogLogo"
           />
         </Link>
-        <div className='flex absolute md:left-[190px] md:top-[37px] lg:left-[310px] lg:top-[62px] left-[120px] top-[40px]'>
+        <div className='flex  absolute md:left-[190px] md:top-[35px] lg:left-[310px] lg:top-[60px] left-[82px] top-[38px]'>
           <ul className='flex space-x-12 font-bold lg:space-x-56 md:space-x-36 md:text-xl lg:text-2xl text-lg '>
             <Link to={'/'} className='border-b-2 border-orange-600 hover:cursor-pointer hover:border-orange-400  hover:animate-pulse'>Home</Link>
             <Link to={'/blog'} className='border-b-2 border-orange-600 hover:cursor-pointer hover:border-orange-400  hover:animate-pulse'>Blog</Link>
