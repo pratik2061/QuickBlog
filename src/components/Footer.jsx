@@ -43,7 +43,7 @@ function Footer() {
                     className="border-b-2 lg:border-b-0 border-orange-500"
                     to={"/contact"}
                   >
-                    Contact us
+                    Contact
                   </Link>
                 </li>
               </ul>

@@ -2,7 +2,8 @@ import { configureStore } from "@reduxjs/toolkit";
 import blogReducer from '../slice/blogSlice'
 
 
-export  const store = configureStore({
+  const store = configureStore({
   reducer : blogReducer,
 })
 
+export default store;

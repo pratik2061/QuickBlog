@@ -25,7 +25,7 @@ function App() {
   );
 
   return (
-    <section className="w-full h-[100%] bg-[url('./assets/main_bg.jpg')] font-[serif] relative">
+    <section className="w-full  bg-[url('./assets/main_bg.jpg')] font-[serif] relative">
       <div className="w-full h-[100vh] bg-[rgba(0,0,0,0.3)]">
         <RouterProvider router={router} />
       </div>
